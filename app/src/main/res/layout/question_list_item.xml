@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:background="#B6BFB7">
+
+        <LinearLayout
+            android:id="@+id/numques"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <EditText
+                android:id="@+id/txtItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="90"
+                android:hint="question"
+                android:inputType="text"
+                android:nextFocusDown="@+id/txtItemA"
+                android:fontFamily="@font/centurygothic"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LLAC"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/numques"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/txtItemA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:hint="A"
+                android:inputType="text"
+                android:nextFocusDown="@+id/txtItemB"
+                android:fontFamily="@font/centurygothic"/>
+
+            <EditText
+                android:id="@+id/txtItemC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:hint="C"
+                android:inputType="text"
+                android:nextFocusDown="@+id/txtItemD"
+                android:fontFamily="@font/centurygothic"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LLBD"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/LLAC"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/txtItemB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:hint="B"
+                android:inputType="text"
+                android:nextFocusDown="@+id/txtItemC"
+                android:fontFamily="@font/centurygothic"/>
+
+            <EditText
+                android:id="@+id/txtItemD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:hint="D"
+                android:inputType="text"
+                android:fontFamily="@font/centurygothic"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

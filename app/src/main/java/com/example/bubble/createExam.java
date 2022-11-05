@@ -81,6 +81,14 @@ public class createExam extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
             }
         });
+        createGenerateBtn= (Button) findViewById(R.id.createGenerateBtn);
+        createGenerateBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(createExam.this,questionnaire.class));
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+            }
+        });
     }
 
 
