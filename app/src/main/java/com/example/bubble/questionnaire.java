@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -20,6 +21,8 @@ public class questionnaire extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questionnaire);
         getSupportActionBar().setTitle("Questionnaire");
+        int num = Item.num;
+
         questionnaireBackBtn= (Button) findViewById(R.id.questionnaireBackBtn);
         questionnaireBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +41,7 @@ public class questionnaire extends AppCompatActivity {
         });
         conRecycleView = findViewById(R.id.conRecycleView);
         ArrayList<Item> items = new ArrayList<>();
-        for (int i=0;i<75;i++){
+        for (int i=0;i<num;i++){
             items.add(new Item("Question "+(i+1),"","","",""));
         }
         item_RecyclerView_Adapter adapter = new item_RecyclerView_Adapter(this);

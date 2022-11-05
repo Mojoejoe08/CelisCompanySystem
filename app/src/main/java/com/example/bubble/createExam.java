@@ -44,8 +44,9 @@ public class createExam extends AppCompatActivity {
         itemNumberSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(createExam.this, itemNum.get(position).toString(), Toast.LENGTH_SHORT).show();
                 itemNumTxt = itemNum.get(position);
+                Item.num = itemNumTxt;
+                Toast.makeText(createExam.this, itemNumTxt.toString(), Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -59,6 +60,7 @@ public class createExam extends AppCompatActivity {
 
                 }else{
                     teacherNameTxt = teacherName.getText().toString();
+                    Item.teachername = teacherNameTxt;
                     Toast.makeText(createExam.this, teacherNameTxt, Toast.LENGTH_SHORT).show();
                 }
             }
@@ -69,6 +71,7 @@ public class createExam extends AppCompatActivity {
                 if (hasFocus){
                 }else{
                     subjectNameTxt = subjectName.getText().toString();
+                    Item.subjectname = subjectNameTxt;
                     Toast.makeText(createExam.this, subjectNameTxt, Toast.LENGTH_SHORT).show();
                 }
             }
@@ -85,25 +88,11 @@ public class createExam extends AppCompatActivity {
         createGenerateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(createExam.this,questionnaire.class));
+                Intent intent = new Intent(createExam.this,questionnaire.class);
+                startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
         });
     }
-
-
-
-    public Integer getItemNumTxt() {
-        return itemNumTxt;
-    }
-
-    public String getTeacherNameTxt() {
-        return teacherNameTxt;
-    }
-
-    public String getSubjectNameTxt() {
-        return subjectNameTxt;
-    }
-
 
 }

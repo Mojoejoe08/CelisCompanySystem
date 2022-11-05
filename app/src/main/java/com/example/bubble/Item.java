@@ -6,6 +6,9 @@ public class Item {
     private String b;
     private String c;
     private String d;
+    static Integer num;
+    static String teachername;
+    static String subjectname;
 
     public Item(String question, String a, String b, String c, String d) {
         this.question = question;
@@ -65,4 +68,5 @@ public class Item {
                 ", d='" + d + '\'' +
                 '}';
     }
+
 }
