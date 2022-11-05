@@ -2,10 +2,13 @@ package com.example.bubble;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -19,11 +22,13 @@ public class createExam extends AppCompatActivity {
     private Integer itemNumTxt;
     private String teacherNameTxt;
     private String subjectNameTxt;
+    private Button createBackBtn;
+    private Button createGenerateBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_exam);
-        getSupportActionBar().hide();
+        getSupportActionBar().setTitle("Create Exam");
         itemNumberSpinner = findViewById(R.id.itemNumberSpinner);
         teacherName = findViewById(R.id.teacherName);
         subjectName = findViewById(R.id.subjectName);
@@ -66,6 +71,14 @@ public class createExam extends AppCompatActivity {
                     subjectNameTxt = subjectName.getText().toString();
                     Toast.makeText(createExam.this, subjectNameTxt, Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+        createBackBtn = (Button) findViewById(R.id.createBackBtn);
+        createBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(createExam.this,MainActivity.class));
+                overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
             }
         });
     }
