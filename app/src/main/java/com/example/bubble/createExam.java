@@ -53,29 +53,7 @@ public class createExam extends AppCompatActivity {
 
             }
         });
-        teacherName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus){
 
-                }else{
-                    teacherNameTxt = teacherName.getText().toString();
-                    Item.teachername = teacherNameTxt;
-                    Toast.makeText(createExam.this, teacherNameTxt, Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-        subjectName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus){
-                }else{
-                    subjectNameTxt = subjectName.getText().toString();
-                    Item.subjectname = subjectNameTxt;
-                    Toast.makeText(createExam.this, subjectNameTxt, Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
         createBackBtn = (Button) findViewById(R.id.createBackBtn);
         createBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +66,11 @@ public class createExam extends AppCompatActivity {
         createGenerateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                teacherNameTxt = teacherName.getText().toString();
+                Item.teachername = teacherNameTxt;
+                subjectNameTxt = subjectName.getText().toString();
+                Item.subjectname = subjectNameTxt;
+
                 Intent intent = new Intent(createExam.this,questionnaire.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);

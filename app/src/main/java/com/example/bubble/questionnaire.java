@@ -28,8 +28,9 @@ public class questionnaire extends AppCompatActivity {
 
         conRecycleView = findViewById(R.id.conRecycleView);
         ArrayList<Item> items = new ArrayList<>();
+
         for (int i=0;i<num;i++){
-            items.add(new Item("Question "+(i+1),"","","",""));
+            items.add(new Item(i+1,"Question "+(i+1),"","","",""));
         }
         item_RecyclerView_Adapter adapter = new item_RecyclerView_Adapter(this);
         adapter.setItems(items);

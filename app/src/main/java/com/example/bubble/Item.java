@@ -9,17 +9,20 @@ public class Item implements Serializable {
     private String b;
     private String c;
     private String d;
+    private int que_id;
     static Integer num;
     static String teachername;
     static String subjectname;
     static ArrayList questions;
 
-    public Item(String question, String a, String b, String c, String d) {
+    public Item(int que_id,String question, String a, String b, String c, String d ) {
+        this.que_id = que_id;
         this.question = question;
         this.a = a;
         this.b = b;
         this.c = c;
         this.d = d;
+
     }
 
     public String getQuestion() {
@@ -62,6 +65,14 @@ public class Item implements Serializable {
         this.d = d;
     }
 
+    public int getQue_id() {
+        return que_id;
+    }
+
+    public void setQue_id(int que_id) {
+        this.que_id = que_id;
+    }
+
     @Override
     public String toString() {
         return "Item{" +
@@ -70,7 +81,7 @@ public class Item implements Serializable {
                 ", b='" + b + '\'' +
                 ", c='" + c + '\'' +
                 ", d='" + d + '\'' +
+                ", que_id=" + que_id +
                 '}';
     }
-
 }

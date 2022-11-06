@@ -105,7 +105,7 @@ public class item_RecyclerView_Adapter extends RecyclerView.Adapter<item_Recycle
 
     public void setItems(ArrayList<Item> items) {
         this.items = items;
-//        notifyDataSetChanged();
+        notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
@@ -114,7 +114,6 @@ public class item_RecyclerView_Adapter extends RecyclerView.Adapter<item_Recycle
         private EditText txtItemB;
         private EditText txtItemC;
         private EditText txtItemD;
-        private TextView ques;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             txtItem = itemView.findViewById(R.id.txtItem);
@@ -122,7 +121,6 @@ public class item_RecyclerView_Adapter extends RecyclerView.Adapter<item_Recycle
             txtItemB = itemView.findViewById(R.id.txtItemB);
             txtItemC = itemView.findViewById(R.id.txtItemC);
             txtItemD = itemView.findViewById(R.id.txtItemD);
-
         }
     }
 }
