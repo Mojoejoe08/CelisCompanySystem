@@ -15,7 +15,7 @@
         <LinearLayout
             android:id="@+id/numques"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingTop="5dp">
 
@@ -33,7 +33,7 @@
         <LinearLayout
             android:id="@+id/LLAC"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/numques"
             android:orientation="horizontal">
 
@@ -61,7 +61,7 @@
         <LinearLayout
             android:id="@+id/LLBD"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/LLAC"
             android:orientation="horizontal">
 

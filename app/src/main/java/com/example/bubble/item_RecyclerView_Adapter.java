@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class item_RecyclerView_Adapter extends RecyclerView.Adapter<item_RecyclerView_Adapter.ViewHolder>{
-
     private ArrayList<Item> items = new ArrayList<>();
     private Context context;
     private String aw;
@@ -31,7 +30,15 @@ public class item_RecyclerView_Adapter extends RecyclerView.Adapter<item_Recycle
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.txtItem.setHint(items.get(position).getQuestion());
+        if (items.get(position).getA().equals("")){
+            holder.txtItem.setHint(items.get(position).getQuestion());
+        }else{
+            holder.txtItem.setText(items.get(position).getQuestion());
+            holder.txtItemA.setText(items.get(position).getA());
+            holder.txtItemB.setText(items.get(position).getB());
+            holder.txtItemC.setText(items.get(position).getC());
+            holder.txtItemD.setText(items.get(position).getD());
+        }
         holder.txtItem.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
@@ -39,7 +46,6 @@ public class item_RecyclerView_Adapter extends RecyclerView.Adapter<item_Recycle
                 } else {
                     aw = holder.txtItem.getText().toString();
                     items.get(position).setQuestion(aw);
-                    Toast.makeText(context, items.get(position).getQuestion(), Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -50,7 +56,6 @@ public class item_RecyclerView_Adapter extends RecyclerView.Adapter<item_Recycle
                 } else {
                     aw = holder.txtItemA.getText().toString();
                     items.get(position).setA(aw);
-                    Toast.makeText(context, items.get(position).getA(), Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -61,7 +66,6 @@ public class item_RecyclerView_Adapter extends RecyclerView.Adapter<item_Recycle
                 } else {
                     aw = holder.txtItemB.getText().toString();
                     items.get(position).setB(aw);
-                    Toast.makeText(context, items.get(position).getB(), Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -72,7 +76,6 @@ public class item_RecyclerView_Adapter extends RecyclerView.Adapter<item_Recycle
                 } else {
                     aw = holder.txtItemC.getText().toString();
                     items.get(position).setC(aw);
-                    Toast.makeText(context, items.get(position).getC(), Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -83,7 +86,13 @@ public class item_RecyclerView_Adapter extends RecyclerView.Adapter<item_Recycle
                 } else {
                     aw = holder.txtItemD.getText().toString();
                     items.get(position).setD(aw);
-                    Toast.makeText(context, items.get(position).getD(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(context,
+                            items.get(position).getQuestion()+
+                            items.get(position).getA()+
+                            items.get(position).getB()+
+                            items.get(position).getC()+
+                            items.get(position).getD()
+                            , Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -96,7 +105,7 @@ public class item_RecyclerView_Adapter extends RecyclerView.Adapter<item_Recycle
 
     public void setItems(ArrayList<Item> items) {
         this.items = items;
-        notifyDataSetChanged();
+//        notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{

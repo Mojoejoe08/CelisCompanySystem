@@ -8,7 +8,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/conRecycleView"
+        android:id="@+id/previewRecycleView"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"
         android:layout_above="@+id/qpbottomtoolbar"/>
@@ -32,7 +32,7 @@
                 android:textAlignment="center"
                 android:text="Back"
                 android:backgroundTint="@color/green"
-                android:id="@+id/questionnaireBackBtn"/>
+                android:id="@+id/questionnairePBackBtn"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -40,7 +40,7 @@
                 android:textAlignment="center"
                 android:text="Generate"
                 android:backgroundTint="@color/green"
-                android:id="@+id/questionnaireGenerateBtn"/>
+                android:id="@+id/questionnairePGenerateBtn"/>
         </LinearLayout>
     </Toolbar>
 </RelativeLayout>
