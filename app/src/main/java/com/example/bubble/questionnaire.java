@@ -23,6 +23,16 @@ public class questionnaire extends AppCompatActivity {
         getSupportActionBar().setTitle("Questionnaire");
         int num = Item.num;
 
+
+        conRecycleView = findViewById(R.id.conRecycleView);
+        ArrayList<Item> items = new ArrayList<>();
+        for (int i=0;i<num;i++){
+            items.add(new Item("Question "+(i+1),"","","",""));
+        }
+        item_RecyclerView_Adapter adapter = new item_RecyclerView_Adapter(this);
+        adapter.setItems(items);
+        conRecycleView.setAdapter(adapter);
+        conRecycleView.setLayoutManager(new LinearLayoutManager(this));
         questionnaireBackBtn= (Button) findViewById(R.id.questionnaireBackBtn);
         questionnaireBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,14 +49,5 @@ public class questionnaire extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
         });
-        conRecycleView = findViewById(R.id.conRecycleView);
-        ArrayList<Item> items = new ArrayList<>();
-        for (int i=0;i<num;i++){
-            items.add(new Item("Question "+(i+1),"","","",""));
-        }
-        item_RecyclerView_Adapter adapter = new item_RecyclerView_Adapter(this);
-        adapter.setItems(items);
-        conRecycleView.setAdapter(adapter);
-        conRecycleView.setLayoutManager(new LinearLayoutManager(this));
     }
 }

@@ -1,5 +1,7 @@
 package com.example.bubble;
 
+import java.util.ArrayList;
+
 public class Item {
     private String question;
     private String a;
@@ -9,6 +11,7 @@ public class Item {
     static Integer num;
     static String teachername;
     static String subjectname;
+    static ArrayList questions;
 
     public Item(String question, String a, String b, String c, String d) {
         this.question = question;
