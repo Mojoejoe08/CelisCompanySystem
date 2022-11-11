@@ -65,7 +65,13 @@
         android:layout_above="@+id/qpbottomtoolbar"
         android:layout_below="@+id/teacherLinear"
         android:layout_centerHorizontal="true" />
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Answer Sheet"
+        android:layout_above="@+id/qpbottomtoolbar"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/answerSheetBtn"/>
     <Toolbar
         android:id="@+id/qpbottomtoolbar"
         android:layout_width="match_parent"
@@ -91,12 +97,12 @@
                 android:textAlignment="center" />
 
             <Button
-                android:id="@+id/questionnairePGenerateBtn"
+                android:id="@+id/questionnairePDownloadBtn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="50"
                 android:backgroundTint="@color/green"
-                android:text="Generate"
+                android:text="Download"
                 android:textAlignment="center" />
         </LinearLayout>
     </Toolbar>
