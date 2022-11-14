@@ -2,11 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/createExamLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".createExam">
-
+    tools:context=".newSet">
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -14,19 +12,38 @@
         android:layout_centerHorizontal="true"
         android:orientation="vertical"
         android:textAlignment="center">
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/centurygothic"
+        android:text="Name of Set"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
 
+        <EditText
+            android:id="@+id/newSetEditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/centurygothic"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/centurygothic"
-            android:text="No. of Question"
+            android:text="Number of Set"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:textStyle="bold" />
-
+            android:textStyle="bold"/>
         <Spinner
-            android:id="@+id/itemNumberSpinner"
+            android:id="@+id/newSetSpinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -38,53 +55,7 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/centurygothic"
-            android:text="Name of Teacher"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/teacherName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/centurygothic"
-            android:inputType="text"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/centurygothic"
-            android:text="Name of Subject"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/subjectName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/centurygothic"
-            android:inputType="text"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-
     </LinearLayout>
-
     <Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -104,15 +75,15 @@
                 android:textAlignment="center"
                 android:text="Back"
                 android:backgroundTint="@color/green"
-                android:id="@+id/createBackBtn"/>
+                android:id="@+id/newSetBackBtn"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="50"
                 android:textAlignment="center"
-                android:text="Generate"
+                android:text="Next"
                 android:backgroundTint="@color/green"
-                android:id="@+id/createGenerateBtn"/>
+                android:id="@+id/newSetNextBtn"/>
         </LinearLayout>
     </Toolbar>
 </RelativeLayout>

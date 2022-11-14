@@ -7,31 +7,30 @@
     tools:context=".MainActivity">
 
 
-        <Button
-            android:id="@+id/btnCreate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="317dp"
-            android:backgroundTint="@color/green"
-            android:fontFamily="@font/centurygothic"
-            android:text="Create Exam"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+    <Button
+        android:id="@+id/btnCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:backgroundTint="@color/green"
+        android:fontFamily="@font/centurygothic"
+        android:text="Create Exam"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/btnCheck"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="416dp"
-            android:backgroundTint="@color/green"
-            android:fontFamily="@font/centurygothic"
-            android:text="Check Exam"
-            android:textSize="20dp"
-            android:textStyle="bold"/>
+    <Button
+        android:id="@+id/btnCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnCreate"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="70dp"
+        android:backgroundTint="@color/green"
+        android:fontFamily="@font/centurygothic"
+        android:text="Check Exam"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
     <Toolbar
         android:layout_width="match_parent"

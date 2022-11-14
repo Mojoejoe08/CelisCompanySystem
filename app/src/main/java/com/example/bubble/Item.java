@@ -14,6 +14,7 @@ public class Item implements Serializable {
     static String teachername;
     static String subjectname;
     static ArrayList questions;
+    static String name_set;
 
     public Item(int que_id,String question, String a, String b, String c, String d ) {
         this.que_id = que_id;
@@ -85,3 +86,4 @@ public class Item implements Serializable {
                 '}';
     }
 }
+

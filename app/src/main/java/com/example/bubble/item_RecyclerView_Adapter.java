@@ -1,6 +1,8 @@
 package com.example.bubble;
 
 import android.content.Context;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +32,7 @@ public class item_RecyclerView_Adapter extends RecyclerView.Adapter<item_Recycle
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        holder.setIsRecyclable(false);
         if (items.get(position).getA().equals("")){
             holder.txtItem.setHint(items.get(position).getQuestion());
         }else{
@@ -98,6 +101,7 @@ public class item_RecyclerView_Adapter extends RecyclerView.Adapter<item_Recycle
         });
     }
 
+
     @Override
     public int getItemCount() {
         return items.size();
@@ -108,7 +112,7 @@ public class item_RecyclerView_Adapter extends RecyclerView.Adapter<item_Recycle
         notifyDataSetChanged();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder{
         private EditText txtItem;
         private EditText txtItemA;
         private EditText txtItemB;
@@ -121,6 +125,8 @@ public class item_RecyclerView_Adapter extends RecyclerView.Adapter<item_Recycle
             txtItemB = itemView.findViewById(R.id.txtItemB);
             txtItemC = itemView.findViewById(R.id.txtItemC);
             txtItemD = itemView.findViewById(R.id.txtItemD);
+
+
         }
     }
 }
