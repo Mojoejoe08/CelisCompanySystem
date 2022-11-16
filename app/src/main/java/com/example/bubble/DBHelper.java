@@ -22,7 +22,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("drop Table if exists Userdetails");
+        db.execSQL("drop Table if exists questionnaireTbl");
     }
     public boolean insertData(String question, String choice_A, String choice_B, String choice_C,String choice_D){
         SQLiteDatabase db = this.getWritableDatabase();

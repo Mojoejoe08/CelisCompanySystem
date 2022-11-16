@@ -14,6 +14,9 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.chaquo.python.Python;
+import com.chaquo.python.android.AndroidPlatform;
+
 public class MainActivity extends AppCompatActivity {
     private Button btnCreate;
     private Button btnCheck;
@@ -22,8 +25,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         getSupportActionBar().setTitle("Main Menu");
+        if (!Python.isStarted())
+            Python.start(new AndroidPlatform(this));
+
+
         if (ContextCompat.checkSelfPermission(MainActivity.this,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
             if(ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this,

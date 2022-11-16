@@ -39,22 +39,22 @@ public class ansKey_RecyclerView_Adapter extends RecyclerView.Adapter<ansKey_Rec
                 switch (checkedId){
                     case R.id.rbA:{
                         ansList.get(position).setAns_num(0);
-                        Toast.makeText(context, "A", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context,String.valueOf(ansList.get(position).getAns_num()), Toast.LENGTH_SHORT).show();
                         break;
                     }
                     case R.id.rbB:{
                         ansList.get(position).setAns_num(1);
-                        Toast.makeText(context, "B", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context,String.valueOf(ansList.get(position).getAns_num()), Toast.LENGTH_SHORT).show();
                         break;
                     }
                     case R.id.rbC:{
                         ansList.get(position).setAns_num(2);
-                        Toast.makeText(context, "C", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context,String.valueOf(ansList.get(position).getAns_num()), Toast.LENGTH_SHORT).show();
                         break;
                     }
                     case R.id.rbD:{
                         ansList.get(position).setAns_num(3);
-                        Toast.makeText(context, "D", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, String.valueOf(ansList.get(position).getAns_num()), Toast.LENGTH_SHORT).show();
                         break;
                     }
                     default:
