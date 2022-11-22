@@ -15,15 +15,19 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         ndk {
-            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+            abiFilters "armeabi-v7a", "arm64-v8a"
         }
         python {
-            buildPython "C:/Users/Administrator/AppData/Local/Programs/Python/Python311/python.exe"
+            version "3.8"
             pip{
                 install "fpdf"
-            }
-            pyc {
-                src false
+                install "numpy"
+                install "imutils"
+                install "scipy"
+                install "opencv-contrib-python"
+                install "pybase64"
+                install "scikit-image"
+                install "pillow"
             }
         }
         sourceSets {

@@ -9,5 +9,6 @@ public class StudentScore {
     @NonNull
     @PrimaryKey(autoGenerate = false)
     public String stud_name;
+    public String set_name;
     public int stud_score;
 }

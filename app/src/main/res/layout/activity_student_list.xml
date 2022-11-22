@@ -32,8 +32,8 @@
         android:id="@+id/studentListRecView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/studentListRL"
-        android:layout_above="@+id/studentListToolbar"/>
+        android:layout_above="@+id/studentListToolbar"
+        android:layout_below="@+id/studentListRL"/>
 
     <Toolbar
         android:id="@+id/studentListToolbar"

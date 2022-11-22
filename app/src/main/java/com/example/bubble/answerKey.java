@@ -32,7 +32,7 @@ public class answerKey extends AppCompatActivity {
         answerKerRecView = findViewById(R.id.answerKerRecView);
         ansList = new ArrayList<>();
         for (int i=0;i<num;i++){
-            ansList.add(new ansKey(i));
+            ansList.add(new ansKey(i,"NULL"));
         }
         ansKey_RecyclerView_Adapter adapter = new ansKey_RecyclerView_Adapter(this);
         adapter.setItems(ansList);
@@ -139,7 +139,6 @@ public class answerKey extends AppCompatActivity {
                 }else{
                     Toast.makeText(answerKey.this, "Failed!", Toast.LENGTH_SHORT).show();
                 }
-
                 startActivity(new Intent(answerKey.this,studentList.class));
                 overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
@@ -147,10 +146,10 @@ public class answerKey extends AppCompatActivity {
     }
 
     private void saveNewAnswerKey25(String set_name
-    ,int one,int two,int three,int four,int five,int six,int seven
-    ,int eight,int nine,int ten,int eleven,int twelve,int thirteen,int fourteen
-    ,int fifteen,int sixteen,int seventeen,int eighteen,int nineteen,int twenty
-    ,int twenty_one,int twenty_two,int twenty_three,int twenty_four,int twenty_five){
+    ,String one,String two,String three,String four,String five,String six,String seven
+    ,String eight,String nine,String ten,String eleven,String twelve,String thirteen,String fourteen
+    ,String fifteen,String sixteen,String seventeen,String eighteen,String nineteen,String twenty
+    ,String twenty_one,String twenty_two,String twenty_three,String twenty_four,String twenty_five){
         SetDatabase db = SetDatabase.getInstance(this.getApplicationContext());
         KeyAnswer keyAnswer = new KeyAnswer(); keyAnswer.sets_name = set_name;
 
@@ -170,15 +169,15 @@ public class answerKey extends AppCompatActivity {
 
 
     private void saveNewAnswerKey50(String set_name
-            ,int one,int two,int three,int four,int five,int six,int seven
-            ,int eight,int nine,int ten,int eleven,int twelve,int thirteen,int fourteen
-            ,int fifteen,int sixteen,int seventeen,int eighteen,int nineteen,int twenty
-            ,int twenty_one,int twenty_two,int twenty_three,int twenty_four,int twenty_five
-            ,int twenty_six,int twenty_seven,int twenty_eight,int twenty_nine,int thirty
-            ,int thirty_one,int thirty_two,int thirty_three,int thirty_four,int thirty_five
-            ,int thirty_six,int thirty_seven,int thirty_eight,int thirty_nine,int forty
-            ,int forty_one,int forty_two,int forty_three,int forty_four,int forty_five
-            ,int forty_six,int forty_seven,int forty_eight,int forty_nine,int fifty){
+            ,String one,String two,String three,String four,String five,String six,String seven
+            ,String eight,String nine,String ten,String eleven,String twelve,String thirteen,String fourteen
+            ,String fifteen,String sixteen,String seventeen,String eighteen,String nineteen,String twenty
+            ,String twenty_one,String twenty_two,String twenty_three,String twenty_four,String twenty_five
+            ,String twenty_six,String twenty_seven,String twenty_eight,String twenty_nine,String thirty
+            ,String thirty_one,String thirty_two,String thirty_three,String thirty_four,String thirty_five
+            ,String thirty_six,String thirty_seven,String thirty_eight,String thirty_nine,String forty
+            ,String forty_one,String forty_two,String forty_three,String forty_four,String forty_five
+            ,String forty_six,String forty_seven,String forty_eight,String forty_nine,String fifty){
         SetDatabase db = SetDatabase.getInstance(this.getApplicationContext());
         KeyAnswer keyAnswer = new KeyAnswer(); keyAnswer.sets_name = set_name;
 
@@ -206,20 +205,20 @@ public class answerKey extends AppCompatActivity {
     }
 
     private void saveNewAnswerKey75(String set_name
-            ,int one,int two,int three,int four,int five,int six,int seven
-            ,int eight,int nine,int ten,int eleven,int twelve,int thirteen,int fourteen
-            ,int fifteen,int sixteen,int seventeen,int eighteen,int nineteen,int twenty
-            ,int twenty_one,int twenty_two,int twenty_three,int twenty_four,int twenty_five
-            ,int twenty_six,int twenty_seven,int twenty_eight,int twenty_nine,int thirty
-            ,int thirty_one,int thirty_two,int thirty_three,int thirty_four,int thirty_five
-            ,int thirty_six,int thirty_seven,int thirty_eight,int thirty_nine,int forty
-            ,int forty_one,int forty_two,int forty_three,int forty_four,int forty_five
-            ,int forty_six,int forty_seven,int forty_eight,int forty_nine,int fifty
-            ,int fifty_one,int fifty_two,int fifty_three,int fifty_four,int fifty_five
-            ,int fifty_six,int fifty_seven,int fifty_eight,int fifty_nine,int sixty
-            ,int sixty_one,int sixty_two,int sixty_three,int sixty_four,int sixty_five
-            ,int sixty_six,int sixty_seven,int sixty_eight,int sixty_nine,int seventy
-            ,int seventy_one,int seventy_two,int seventy_three,int seventy_four,int seventy_five){
+            ,String one,String two,String three,String four,String five,String six,String seven
+            ,String eight,String nine,String ten,String eleven,String twelve,String thirteen,String fourteen
+            ,String fifteen,String sixteen,String seventeen,String eighteen,String nineteen,String twenty
+            ,String twenty_one,String twenty_two,String twenty_three,String twenty_four,String twenty_five
+            ,String twenty_six,String twenty_seven,String twenty_eight,String twenty_nine,String thirty
+            ,String thirty_one,String thirty_two,String thirty_three,String thirty_four,String thirty_five
+            ,String thirty_six,String thirty_seven,String thirty_eight,String thirty_nine,String forty
+            ,String forty_one,String forty_two,String forty_three,String forty_four,String forty_five
+            ,String forty_six,String forty_seven,String forty_eight,String forty_nine,String fifty
+            ,String fifty_one,String fifty_two,String fifty_three,String fifty_four,String fifty_five
+            ,String fifty_six,String fifty_seven,String fifty_eight,String fifty_nine,String sixty
+            ,String sixty_one,String sixty_two,String sixty_three,String sixty_four,String sixty_five
+            ,String sixty_six,String sixty_seven,String sixty_eight,String sixty_nine,String seventy
+            ,String seventy_one,String seventy_two,String seventy_three,String seventy_four,String seventy_five){
         SetDatabase db = SetDatabase.getInstance(this.getApplicationContext());
         KeyAnswer keyAnswer = new KeyAnswer(); keyAnswer.sets_name = set_name;
 

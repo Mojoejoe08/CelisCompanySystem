@@ -61,4 +61,10 @@ public interface SetsDao {
     @Transaction
     @Query("SELECT * FROM student WHERE stud_name=:stud_name ")
     List<StudentAndScore> getStudentWithScore(String stud_name);
+
+    @Query("SELECT * FROM KeyAnswer WHERE sets_name=:sets_name")
+    List<KeyAnswer> getAnswerKey(String sets_name);
+
+    @Query("SELECT * FROM STUDENT WHERE sets_name=:sets_name")
+    List<Student> getStudents(String sets_name);
 }
